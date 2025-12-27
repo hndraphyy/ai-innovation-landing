@@ -1,11 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import TheNavbar from './components/TheNavbar.vue'
+</script>
 
 <template>
-  <h1 class="bg-gray-3">You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <TheNavbar />
+  <RouterView />
 </template>
 
 <style scoped></style>
