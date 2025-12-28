@@ -17,14 +17,14 @@ const isOpen = ref(false)
 
 <template>
   <nav
-    class="fixed z-99 top-0 left-0 right-0 h-20 2xl:h-25 flex items-center bg-brand-dark backdrop-blur-md font-display z-100 border-b border-white/5"
+    class="fixed z-99 top-0 left-0 right-0 h-20 2xl:h-25 flex items-center bg-transparent backdrop-blur-md font-display z-100 border-b border-white/5"
   >
     <div class="container-center flex justify-between items-center bg-transparent">
       <RouterLink
         to="/"
-        class="flex items-center color-white decoration-none text-6 2xl:text-7.5 gap-1 lg:gap-3"
+        class="flex items-center color-white decoration-none text-5 md:text-6 2xl:text-7.5 md:gap-1 lg:gap-3"
       >
-        <img :src="logoBrand" alt="Logo" />
+        <img :src="logoBrand" alt="Logo" class="w-12 md:w-auto" />
         <span class="font-bold tracking-tight">AI Innovation</span>
       </RouterLink>
 
@@ -44,7 +44,7 @@ const isOpen = ref(false)
 
         <button
           @click="isOpen = !isOpen"
-          class="md:hidden cursor-pointer bg-transparent border-none flex items-center p-0 transition-transform active:scale-90"
+          class="md:hidden cursor-pointer bg-transparent border-none flex items-center transition-transform active:scale-90"
         >
           <img :src="isOpen ? iconX : iconMenu" alt="Menu" class="w-6 h-6 object-contain" />
         </button>
@@ -54,7 +54,7 @@ const isOpen = ref(false)
     <Transition name="fade">
       <div
         v-if="isOpen"
-        class="fixed top-20 inset-0 z-100 px-10 pt-6 flex flex-col h-dvh space-y-7 bg-brand-dark"
+        class="fixed top-20 inset-0 z-100 px-5 md:px-6 pt-6 flex flex-col h-dvh space-y-7 bg-brand-dark"
       >
         <RouterLink
           v-for="link in navLinks"

@@ -31,7 +31,7 @@ export default defineConfig({
     }),
   ],
   shortcuts: {
-    'container-center': 'max-w-7xl 2xl:max-w-[1590px] m-auto w-full px-6',
+    'container-center': 'max-w-7xl 2xl:max-w-[1590px] m-auto w-full px-2 md:px-6',
     'nav-link':
       'text-white/80 hover:text-brand-primary decoration-none text-4 transition-colors font-medium',
     'logo-link': 'flex justify-start items-center color-white decoration-none gap-3 font-bold',
