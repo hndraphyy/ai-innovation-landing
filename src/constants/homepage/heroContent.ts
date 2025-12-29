@@ -4,10 +4,19 @@ import Img3 from '@/assets/images/homepage/img-3.webp'
 import Img4 from '@/assets/images/homepage/img-4.webp'
 import Img5 from '@/assets/images/homepage/img-5.webp'
 
-export const HERO_CONTENT = {
+export interface HeroContent {
+  title: string
+  description: string
+  images: string[]
+  buttons: {
+    primary: string
+    secondary: string
+  }
+}
+
+export const HERO_CONTENT: HeroContent = {
   title: 'EMPOWERING <br /> INNOVATION THROUGH AI',
-  description:
-    'Transforming industries by delivering innovative AI solutions that drive success and create value for businesses of all sizes.',
+  description: 'Transforming industries by delivering innovative AI solutions...',
   images: [Img1, Img2, Img3, Img4, Img5],
   buttons: {
     primary: 'Contact Us',

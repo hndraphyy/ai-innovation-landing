@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { HERO_CONTENT } from '@/constants/homepage/heroContent'
+import type { HeroContent } from '@/constants/homepage/heroContent'
 import BgShadowTop from '@/assets/images/homepage/bg-shadow-top.webp'
 import BgShadowBottom from '@/assets/images/homepage/bg-shadow-bottom.webp'
 import bgCorner1 from '@/assets/images/homepage/bg-corner-1.webp'
@@ -11,6 +12,8 @@ const getImageSizeClass = (index: number) => {
   if (index === 1 || index === 3) return 'w-12.5 md:w-25 lg:w-40 2xl:w-55'
   return 'w-8.5 md:w-15 lg:w-28 2xl:w-35'
 }
+
+defineProps<HeroContent>()
 </script>
 
 <template>
