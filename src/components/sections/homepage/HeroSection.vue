@@ -12,15 +12,15 @@ import Button from '@/components/ui/Button.vue'
 
 const heroImages = [Img1, Img2, Img3, Img4, Img5]
 const getImageSizeClass = (index: number) => {
-  if (index === 2) return 'w-60 2xl:w-77'
-  if (index === 1 || index === 3) return 'w-40 2xl:w-55'
-  return 'w-28 2xl:w-35'
+  if (index === 2) return 'w-16 md:w-60 2xl:w-77'
+  if (index === 1 || index === 3) return 'w-12.5 md:w-40 2xl:w-55'
+  return 'w-8.5 md:w-28 2xl:w-35'
 }
 </script>
 
 <template>
   <section
-    class="bg-brand-dark relative pt-20 bg-no-repeat bg-bottom h-10000"
+    class="bg-brand-dark relative pt-20 bg-no-repeat bg-bottom"
     :style="{
       backgroundImage: `url(${BgShadowBottom})`,
       backgroundSize: '100% auto',
@@ -51,7 +51,7 @@ const getImageSizeClass = (index: number) => {
           INNOVATION THROUGH AI
         </h1>
         <p
-          class="text-white text-[15px] md:text-[17px] 2xl:text-xl md:w-160 2xl:w-200 m-auto font-400 pb-8 pt-3"
+          class="text-white text-[15px] md:text-[17px] 2xl:text-xl px-5 md:px-0 md:w-160 2xl:w-200 m-auto font-400 pb-8 pt-3"
         >
           Transforming industries by delivering innovative Al solutions that drive success and
           create value for businesses of all sizes.
@@ -62,7 +62,9 @@ const getImageSizeClass = (index: number) => {
         <Button variant="outline">Explore Details</Button>
       </div>
     </main>
-    <div class="relative z-2 flex justify-around items-end pt-13 2xl:pt-15 pb-30">
+    <div
+      class="relative z-2 flex justify-around items-end pt-9.5 md:pt-13 2xl:pt-15 pb-10 md:pb-30"
+    >
       <div
         v-for="(img, index) in heroImages"
         :key="index"
