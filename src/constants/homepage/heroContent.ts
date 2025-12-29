@@ -16,7 +16,8 @@ export interface HeroContent {
 
 export const HERO_CONTENT: HeroContent = {
   title: 'EMPOWERING <br /> INNOVATION THROUGH AI',
-  description: 'Transforming industries by delivering innovative AI solutions...',
+  description:
+    'Transforming industries by delivering innovative Al solutions that drive success and create value for businesses of all sizes.',
   images: [Img1, Img2, Img3, Img4, Img5],
   buttons: {
     primary: 'Contact Us',

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { HERO_CONTENT } from '@/constants/homepage/heroContent'
 import type { HeroContent } from '@/constants/homepage/heroContent'
 import BgShadowTop from '@/assets/images/homepage/bg-shadow-top.webp'
 import BgShadowBottom from '@/assets/images/homepage/bg-shadow-bottom.webp'
@@ -18,7 +17,7 @@ defineProps<HeroContent>()
 
 <template>
   <section
-    class="bg-brand-dark relative pt-30 pb-40 md:pt-20 md:pb-40 lg:pb-50 bg-no-repeat bg-bottom z-1 font-display"
+    class="bg-brand-dark relative h-vh md:h-[inherit] pt-30 pb-40 md:pt-20 md:pb-40 lg:pb-50 bg-no-repeat bg-bottom z-1 font-display"
     :style="{
       backgroundImage: `url(${BgShadowBottom})`,
       backgroundSize: '100% auto',
@@ -43,23 +42,23 @@ defineProps<HeroContent>()
     <main class="container-center pt-14 2xl:pt-20 text-center relative z-1">
       <div>
         <h1
-          v-html="HERO_CONTENT.title"
+          v-html="title"
           class="text-white text-2xl md:text-4xl lg:text-6xl 2xl:text-[80px] font-500 leading-[33 px] md:leading-[50px] lg:leading-[80px] 2xl:leading-[107px]"
         ></h1>
         <p
           class="text-white text-[15px] md:text-[17px] 2xl:text-xl px-5 md:px-0 md:w-160 2xl:w-200 m-auto font-400 pb-8 pt-3"
         >
-          {{ HERO_CONTENT.description }}
+          {{ description }}
         </p>
       </div>
       <div class="flex justify-center items-center gap-3">
-        <Button>{{ HERO_CONTENT.buttons.primary }}</Button>
-        <Button variant="outline">{{ HERO_CONTENT.buttons.secondary }}</Button>
+        <Button>{{ buttons.primary }}</Button>
+        <Button variant="outline">{{ buttons.secondary }}</Button>
       </div>
     </main>
     <div class="relative z-2 flex justify-around items-end pt-9.5 md:pt-13 2xl:pt-15">
       <div
-        v-for="(img, index) in HERO_CONTENT.images"
+        v-for="(img, index) in images"
         :key="index"
         class="transition-all duration-500 ease-in-out"
         :class="getImageSizeClass(index)"
