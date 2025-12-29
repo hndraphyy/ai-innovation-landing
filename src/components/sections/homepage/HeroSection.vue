@@ -1,16 +1,11 @@
 <script setup lang="ts">
+import { HERO_CONTENT } from '@/constants/homepage/heroContent'
 import BgShadowTop from '@/assets/images/homepage/bg-shadow-top.webp'
 import BgShadowBottom from '@/assets/images/homepage/bg-shadow-bottom.webp'
 import bgCorner1 from '@/assets/images/homepage/bg-corner-1.webp'
 import bgCorner2 from '@/assets/images/homepage/bg-corner-2.webp'
-import Img1 from '@/assets/images/homepage/img-1.webp'
-import Img2 from '@/assets/images/homepage/img-2.webp'
-import Img3 from '@/assets/images/homepage/img-3.webp'
-import Img4 from '@/assets/images/homepage/img-4.webp'
-import Img5 from '@/assets/images/homepage/img-5.webp'
 import Button from '@/components/ui/Button.vue'
 
-const heroImages = [Img1, Img2, Img3, Img4, Img5]
 const getImageSizeClass = (index: number) => {
   if (index === 2) return 'w-16 md:w-60 2xl:w-77'
   if (index === 1 || index === 3) return 'w-12.5 md:w-40 2xl:w-55'
@@ -45,28 +40,25 @@ const getImageSizeClass = (index: number) => {
     <main class="container-center pt-14 2xl:pt-20 text-center relative z-1">
       <div>
         <h1
+          v-html="HERO_CONTENT.title"
           class="text-white text-xl md:text-6xl 2xl:text-[80px] font-500 leading-[24px] md:leading-[80px] 2xl:leading-[107px]"
-        >
-          EMPOWERING <br />
-          INNOVATION THROUGH AI
-        </h1>
+        ></h1>
         <p
           class="text-white text-[15px] md:text-[17px] 2xl:text-xl px-5 md:px-0 md:w-160 2xl:w-200 m-auto font-400 pb-8 pt-3"
         >
-          Transforming industries by delivering innovative Al solutions that drive success and
-          create value for businesses of all sizes.
+          {{ HERO_CONTENT.description }}
         </p>
       </div>
       <div class="flex justify-center items-center gap-3">
-        <Button>Contact Us</Button>
-        <Button variant="outline">Explore Details</Button>
+        <Button>{{ HERO_CONTENT.buttons.primary }}</Button>
+        <Button variant="outline">{{ HERO_CONTENT.buttons.secondary }}</Button>
       </div>
     </main>
     <div
-      class="relative z-2 flex justify-around items-end pt-9.5 md:pt-13 2xl:pt-15 pb-10 md:pb-30"
+      class="relative z-2 flex justify-around items-end pt-9.5 md:pt-13 2xl:pt-15 pb-15 md:pb-30"
     >
       <div
-        v-for="(img, index) in heroImages"
+        v-for="(img, index) in HERO_CONTENT.images"
         :key="index"
         class="transition-all duration-500 ease-in-out"
         :class="getImageSizeClass(index)"
