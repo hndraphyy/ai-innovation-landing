@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
+import { ref, onMounted, onUnmounted } from 'vue'
 import logoBrand from '@/assets/icon/logo-brand.svg'
 import iconMenu from '@/assets/icon/navbar/menu-white.svg'
 import iconX from '@/assets/icon/navbar/icon-x.svg'
@@ -13,18 +12,32 @@ const navLinks = [
 ]
 
 const isOpen = ref(false)
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 8
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
   <nav
-    class="fixed z-99 top-0 left-0 right-0 h-20 2xl:h-25 flex items-center bg-transparent backdrop-blur-md font-display z-100 border-b border-white/5"
+    class="fixed top-0 left-0 right-0 h-20 2xl:h-25 flex items-center font-display z-100 transition-all duration-100"
+    :class="[isScrolled || isOpen ? 'bg-brand-dark' : 'bg-transparent']"
   >
-    <div class="container-center flex justify-between items-center bg-transparent">
+    <div class="container-center flex justify-between items-center w-full">
       <RouterLink
         to="/"
-        class="flex items-center color-white decoration-none text-5 md:text-6 2xl:text-7.5 md:gap-1 lg:gap-3"
+        class="flex items-center text-white decoration-none text-5 md:text-6 2xl:text-7.5 gap-2 md:gap-3"
       >
-        <img :src="logoBrand" alt="Logo" class="w-12 md:w-auto" />
+        <img :src="logoBrand" alt="Logo" class="w-10 md:w-12" />
         <span class="font-bold tracking-tight">AI Innovation</span>
       </RouterLink>
 
@@ -33,7 +46,7 @@ const isOpen = ref(false)
           v-for="link in navLinks"
           :key="link.name"
           :to="link.path"
-          class="text-white/80 hover:text-brand-primary decoration-none text-4 transition-colors font-medium"
+          class="text-white/80 hover:text-white decoration-none text-4 transition-colors font-medium"
         >
           {{ link.name }}
         </RouterLink>
@@ -44,9 +57,9 @@ const isOpen = ref(false)
 
         <button
           @click="isOpen = !isOpen"
-          class="md:hidden cursor-pointer bg-transparent border-none flex items-center transition-transform active:scale-90"
+          class="md:hidden cursor-pointer bg-transparent border-none flex items-center p-2"
         >
-          <img :src="isOpen ? iconX : iconMenu" alt="Menu" class="w-6 h-6 object-contain" />
+          <img :src="isOpen ? iconX : iconMenu" alt="Menu" class="w-6 h-6" />
         </button>
       </div>
     </div>
@@ -54,18 +67,17 @@ const isOpen = ref(false)
     <Transition name="fade">
       <div
         v-if="isOpen"
-        class="fixed top-20 inset-0 z-100 px-5 md:px-6 pt-6 flex flex-col h-dvh space-y-7 bg-brand-dark"
+        class="fixed top-20 inset-0 z-90 px-5 pt-6 flex flex-col space-y-7 bg-brand-dark h-screen"
       >
         <RouterLink
           v-for="link in navLinks"
           :key="link.name"
           :to="link.path"
           @click="isOpen = false"
-          class="text-white decoration-none text-5 font-medium hover:text-brand-primary"
+          class="text-white decoration-none text-xl font-medium"
         >
           {{ link.name }}
         </RouterLink>
-
         <Button to="/contact" @click="isOpen = false"> Contact Us </Button>
       </div>
     </Transition>
@@ -82,6 +94,6 @@ const isOpen = ref(false)
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 </style>
