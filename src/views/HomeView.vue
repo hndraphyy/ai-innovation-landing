@@ -6,11 +6,12 @@ import AiRevolutionSection from '@/components/sections/homepage/AiRevolutionSect
 
 import { HERO_CONTENT } from '@/constants/homepage/heroContent'
 import { OUR_MISSIONS_CONTENT } from '@/constants/homepage/ourServices'
+import { AI_REVOLUTION_CONTENT } from '@/constants/homepage/aiRevolutionContent'
 </script>
 
 <template>
   <HeroSection v-bind="HERO_CONTENT" />
   <OurMissionSection v-bind="OUR_MISSIONS_CONTENT" />
   <TextRunning />
-  <AiRevolutionSection />
+  <AiRevolutionSection v-bind="AI_REVOLUTION_CONTENT" />
 </template>
