@@ -41,7 +41,7 @@ export default defineConfig({
     'text-heading':
       'text-brand-dark font-500 leading-[24px] md:leading-[48px] lg:leading-[64px] text-xl md:text-8 lg:text-[48px] lg:-mt-3',
     'text-par':
-      'text-brand-gray font-400 leading-[15px] md:leading-[28px] text-3 md:text-4 lg:text-lg',
+      'text-brand-gray font-400 leading-[15px] md:leading-[21px] lg:leading-[28px] text-3 md:text-3.5 lg:text-lg',
   },
   transformers: [transformerDirectives()],
   theme: {

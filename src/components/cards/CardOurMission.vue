@@ -9,7 +9,7 @@ import ActionIcon from '@/assets/icon/homepage/action-icon.svg'
 
 <template>
   <div
-    class="p-4 lg:p-8 border-2 border-gray-200 rounded-5 shadow-sm transition-all duration-500 cursor-pointer hover:bg-brand-primary hover:border-brand-primary group md:hover:translate-y-5"
+    class="p-4 lg:p-6 2xl:p-8 border-2 border-gray-200 rounded-5 shadow-sm transition-all duration-500 cursor-pointer hover:bg-brand-primary hover:border-brand-primary group md:hover:translate-y-5"
   >
     <div class="flex justify-between items-start">
       <div
@@ -24,7 +24,7 @@ import ActionIcon from '@/assets/icon/homepage/action-icon.svg'
     </div>
 
     <h1
-      class="md:text-6 font-semibold mb-2 py-3 md:py-5 font-primary transition-colors group-hover:text-white"
+      class="md:text-4 lg:text-6 font-semibold mb-2 py-3 md:py-5 font-primary transition-colors group-hover:text-white"
     >
       {{ title }}
     </h1>
