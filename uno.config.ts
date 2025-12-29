@@ -31,10 +31,16 @@ export default defineConfig({
     }),
   ],
   shortcuts: {
-    'container-center': 'max-w-7xl 2xl:max-w-[1590px] m-auto w-full px-2 md:px-6',
+    // container
+    'container-center': 'max-w-7xl 2xl:max-w-[1590px] m-auto w-full px-4 md:px-10',
+    // link
+    'logo-link': 'flex justify-start items-center color-white decoration-none gap-3 font-bold',
     'nav-link':
       'text-white/80 hover:text-brand-primary decoration-none text-4 transition-colors font-medium',
-    'logo-link': 'flex justify-start items-center color-white decoration-none gap-3 font-bold',
+    // text
+    'text-heading':
+      'text-brand-dark font-500 leading-[24px] md:leading-[64px] text-lg md:text-[48px] -mt-3',
+    'text-par': 'text-brand-gray font-400 leading-[15px] md:leading-[28px] text-3 md:text-lg',
   },
   transformers: [transformerDirectives()],
   theme: {
@@ -42,6 +48,7 @@ export default defineConfig({
       brand: {
         primary: '#9588E8',
         dark: '#111111',
+        gray: '#767676',
       },
     },
   },
