@@ -39,8 +39,9 @@ export default defineConfig({
       'text-white/80 hover:text-brand-primary decoration-none text-4 transition-colors font-medium',
     // text
     'text-heading':
-      'text-brand-dark font-500 leading-[24px] md:leading-[64px] text-lg md:text-[48px] -mt-3',
-    'text-par': 'text-brand-gray font-400 leading-[15px] md:leading-[28px] text-3 md:text-lg',
+      'text-brand-dark font-500 leading-[24px] md:leading-[48px] lg:leading-[64px] text-xl md:text-8 lg:text-[48px] lg:-mt-3',
+    'text-par':
+      'text-brand-gray font-400 leading-[15px] md:leading-[28px] text-3 md:text-4 lg:text-lg',
   },
   transformers: [transformerDirectives()],
   theme: {
