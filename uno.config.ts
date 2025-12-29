@@ -42,14 +42,31 @@ export default defineConfig({
       'text-brand-dark font-500 leading-[24px] md:leading-[48px] lg:leading-[64px] text-xl md:text-8 lg:text-[48px] lg:-mt-3',
     'text-par':
       'text-brand-gray font-400 leading-[15px] md:leading-[21px] lg:leading-[28px] text-3 md:text-3.5 lg:text-lg',
+    // animate
+    'animate-glow': 'animate-pulse-slow',
   },
   transformers: [transformerDirectives()],
   theme: {
     colors: {
       brand: {
         primary: '#9588E8',
+        primaryHover: '#6e63b5ff',
         dark: '#111111',
         gray: '#767676',
+      },
+    },
+    animation: {
+      keyframes: {
+        'pulse-slow': '{ 0%, 100% { opacity: 1; } 50% { opacity: 0.50; } }',
+      },
+      durations: {
+        'pulse-slow': '8s',
+      },
+      timingFns: {
+        'pulse-slow': 'ease-in-out',
+      },
+      counts: {
+        'pulse-slow': 'infinite',
       },
     },
   },

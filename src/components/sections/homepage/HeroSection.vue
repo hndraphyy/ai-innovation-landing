@@ -26,7 +26,7 @@ defineProps<HeroContent>()
   >
     <div class="relative">
       <div class="flex justify-center items-center">
-        <img :src="BgShadowTop" alt="bg-shadow-top" class="absolute -top-30 z-0" />
+        <img :src="BgShadowTop" alt="bg-shadow-top" class="absolute -top-30 z-0 animate-glow" />
       </div>
       <img
         :src="bgCorner1"
@@ -63,7 +63,9 @@ defineProps<HeroContent>()
         class="transition-all duration-500 ease-in-out"
         :class="getImageSizeClass(index)"
       >
-        <div class="rounded-full overflow-hidden aspect-square border-2 border-white/10 shadow-2xl">
+        <div
+          class="rounded-full overflow-hidden aspect-square border-2 border-white/10 shadow-2xl hover:scale-[1.1] transition-500"
+        >
           <img :src="img" :alt="`hero-img-${index}`" class="w-full h-full object-cover" />
         </div>
       </div>
