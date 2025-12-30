@@ -8,7 +8,7 @@ export interface aiRevolution {
   title: string
   spanTitle: string
   description: string
-  images: string
+  images: string[]
 }
 
 export const AI_REVOLUTION_CONTENT = {

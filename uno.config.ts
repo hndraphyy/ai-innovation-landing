@@ -57,10 +57,11 @@ export default defineConfig({
     },
     animation: {
       keyframes: {
-        'pulse-slow': '{ 0%, 100% { opacity: 1; } 50% { opacity: 0.50; } }',
+        'pulse-slow':
+          '{ 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.50; transform: scale(0.95); } }',
       },
       durations: {
-        'pulse-slow': '8s',
+        'pulse-slow': '4s',
       },
       timingFns: {
         'pulse-slow': 'ease-in-out',
