@@ -30,18 +30,18 @@ const prev = () => {
 </script>
 
 <template>
-  <section>
-    <main class="container-center h-1000">
-      <div class="flex justify-between items-center pb-8 border-b border-[#DDDDDD]">
-        <span class="text-brand-gray text-5">Service</span>
+  <section class="md:py-25 2xl:py-30">
+    <main class="container-center">
+      <div class="flex justify-between items-center pb-5 md:pb-8 border-b border-[#DDDDDD]">
+        <span class="text-brand-gray text-5 font-primary">Service</span>
         <div class="flex items-center gap-10">
-          <span class="text-brand-gray text-5">Overview</span>
+          <span class="text-brand-gray text-5 hidden md:block">Overview</span>
           <div class="flex items-center gap-3">
             <Button
               @click="prev"
               :class="{ 'opacity-20 pointer-events-none': currentPage === 0 }"
               variant="none"
-              class="px-10 border-1 border-gray-3 relative flex justify-center items-center h-[60px] w-[60px]"
+              class="px-10 border-1 border-gray-3 relative flex justify-center items-center h-[35px] w-[25px] md:h-[60px] md:w-[60px]"
             >
               <img class="absolute rotate-180" :src="ArrowRight" alt="Arrow-Right" />
             </Button>
@@ -52,7 +52,7 @@ const prev = () => {
                   (currentPage + 1) * itemsPerPage >= services.length,
               }"
               variant="none"
-              class="px-10 border-1 border-gray-3 relative flex justify-center items-center h-[60px] w-[60px]"
+              class="px-10 border-1 border-gray-3 relative flex justify-center items-center h-[35px] w-[25px] md:h-[60px] md:w-[60px]"
             >
               <img class="absolute" :src="ArrowRight" alt="Arrow-Right" />
             </Button>
@@ -62,12 +62,16 @@ const prev = () => {
       <div
         v-for="(item, index) in displayServices"
         :key="index"
-        class="py-18 px-12.5 grid grid-cols-2 gap-5 border-b border-[#DDDDDD]"
+        class="py-5 md:py-10 lg:py-18 lg:px-12.5 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 border-b border-[#DDDDDD]"
       >
-        <h1 class="text-brand-dark text-10 font-500">{{ item.title }}</h1>
+        <h1
+          class="text-brand-dark text-xl md:text-7 lg:text-10 font-500 font-primary leading-[24px] md:leading-[45px]"
+        >
+          {{ item.title }}
+        </h1>
         <div class="flex items-center gap-2">
-          <p class="font-400">{{ item.description }}</p>
-          <div class="h-13 w-15 rounded-xl bg-[#F6F7FF]"></div>
+          <p class="font-400 text-brand-gray">{{ item.description }}</p>
+          <div class="lg:h-13 lg:w-15 rounded-xl bg-[#F6F7FF]"></div>
         </div>
       </div>
     </main>

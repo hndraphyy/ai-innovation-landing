@@ -13,7 +13,7 @@ defineProps<OurMissionsContent>()
         <p class="text-par text-center md:text-start">{{ description }}</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <CardOurMission
           v-for="(item, index) in cardContent"
           :key="index"

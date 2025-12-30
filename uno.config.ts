@@ -32,7 +32,7 @@ export default defineConfig({
   ],
   shortcuts: {
     // container
-    'container-center': 'max-w-7xl 2xl:max-w-[1590px] m-auto w-full px-4 md:px-10',
+    'container-center': 'max-w-7xl 2xl:max-w-[1590px] m-auto w-full px-4 sm:px-8 lg:px-10',
     // link
     'logo-link': 'flex justify-start items-center color-white decoration-none gap-3 font-bold',
     'nav-link':
