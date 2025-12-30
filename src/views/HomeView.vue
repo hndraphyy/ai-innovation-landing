@@ -5,12 +5,14 @@ import TextRunning from '@/components/sections/highlight/TextRunning.vue'
 import AiRevolutionSection from '@/components/sections/homepage/AiRevolutionSection.vue'
 import ServicesSection from '@/components/sections/homepage/ServicesSection.vue'
 import WeEmbrace from '@/components/sections/highlight/WeEmbrace.vue'
+import PricingSection from '@/components/sections/highlight/PricingSection.vue'
 
 import { HERO_CONTENT } from '@/constants/homepage/heroContent'
 import { OUR_MISSIONS_CONTENT } from '@/constants/homepage/ourServices'
 import { AI_REVOLUTION_CONTENT } from '@/constants/homepage/aiRevolutionContent'
 import { SERVICES_CONENT } from '@/constants/homepage/servicesContent'
 import { WE_EMBRACE_CONTENT } from '@/constants/highlight/weEmbrace'
+import { PRICING_CONTENT } from '@/constants/highlight/pricing'
 </script>
 
 <template>
@@ -20,4 +22,5 @@ import { WE_EMBRACE_CONTENT } from '@/constants/highlight/weEmbrace'
   <AiRevolutionSection v-bind="AI_REVOLUTION_CONTENT" />
   <ServicesSection :services="SERVICES_CONENT" />
   <WeEmbrace v-bind="WE_EMBRACE_CONTENT" />
+  <PricingSection v-bind="PRICING_CONTENT" />
 </template>

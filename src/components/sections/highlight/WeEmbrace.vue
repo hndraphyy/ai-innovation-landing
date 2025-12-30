@@ -6,7 +6,7 @@ const props = defineProps<weEmbrace>()
 </script>
 
 <template>
-  <section class="container-center py-20">
+  <section class="container-center py-20 lg:py-30">
     <div class="bg-[#8176E8] rounded-5 p-8 lg:p-16 flex flex-col md:flex-row items-center gap-10">
       <div class="flex-1 text-white">
         <h1
