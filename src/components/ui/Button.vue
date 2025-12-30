@@ -9,8 +9,8 @@ const props = withDefaults(defineProps<btnProps>(), {
 const variantClasses = {
   primary:
     'bg-brand-primary text-white flex justify-center items-center border-2 border-brand-primary hover:border-brand-primaryHover hover:bg-brand-primaryHover',
-  outline: 'border-2 border-white text-white',
-  dark: 'bg-dark',
+  outline: 'border-2 border-white text-white  justify-center items-center',
+  dark: 'bg-dark text-white flex justify-center items-center',
   none: '',
 }
 

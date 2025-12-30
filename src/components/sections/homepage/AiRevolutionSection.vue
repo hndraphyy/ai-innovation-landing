@@ -18,7 +18,7 @@ const getImgStyle = (index: number) => {
 
 <template>
   <section>
-    <main class="container-center text-center py-20 md:py-30 lg:py-40">
+    <main class="container-center text-center py-25 md:py-30 lg:py-40">
       <div>
         <h1 class="text-heading m-auto leading-[30px] md:leading-[64px] lg:w-200">
           {{ title }}
