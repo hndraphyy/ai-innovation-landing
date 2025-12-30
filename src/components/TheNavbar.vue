@@ -8,6 +8,7 @@ import Button from '@/components/ui/Button.vue'
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
+  { name: 'Pricing', path: '/pricing' },
   { name: 'Services', path: '/services' },
 ]
 

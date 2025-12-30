@@ -26,6 +26,7 @@ const props = defineProps<weEmbrace>()
             :key="index"
             :variant="index === 0 ? 'dark' : 'outline'"
             :to="btn.link"
+            class="w-full md:w-[inherit]"
           >
             {{ btn.label }}
           </Button>
