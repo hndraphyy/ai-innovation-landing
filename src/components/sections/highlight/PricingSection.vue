@@ -6,7 +6,7 @@ defineProps<PricingType>()
 </script>
 
 <template>
-  <section class="py-20 lg:py-30">
+  <section class="relative py-20 lg:py-30 md:!pb-42 md:rounded-b-[60px] md:-mb-15 bg-white">
     <main class="container-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-0 lg:gap-10 mb-20 items-center">
         <h2 class="text-heading max-w-lg text-center md:text-start pb-4 md:pb-0">{{ title }}</h2>

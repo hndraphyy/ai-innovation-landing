@@ -13,6 +13,7 @@ export interface ourSolutions {
   profile: string
   nameUser: string
   titleUser: string
+  Class?: string
 }
 
 export const OUR_SOLUTIONS_CONTENT = {

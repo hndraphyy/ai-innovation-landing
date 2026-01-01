@@ -25,5 +25,5 @@ import { OUR_SOLUTIONS_CONTENT } from '@/constants/highlight/ourSolutions'
   <ServicesSection :services="SERVICES_CONENT" />
   <WeEmbrace v-bind="WE_EMBRACE_CONTENT" />
   <PricingSection v-bind="PRICING_CONTENT" />
-  <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" />
+  <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-brand-dark" />
 </template>
