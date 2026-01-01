@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { weEmbrace } from '@/constants/highlight/weEmbrace'
+import type { ourSolutions } from '@/constants/highlight/ourSolutions'
 import Button from '@/components/ui/Button.vue'
 
-const props = defineProps<weEmbrace>()
+const props = defineProps<ourSolutions>()
 </script>
 
 <template>
   <section class="container-center py-20 lg:py-30">
     <div
-      class="bg-brand-primary rounded-5 p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-10"
+      class="bg-brand-primary rounded-5 p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-10 flex justify-between items-center"
     >
-      <div class="flex-1 text-white">
+      <div class="text-white lg:max-w-[458px] 2xl:max-w-full">
         <h1
           class="text-center md:text-start text-white font-500 leading-[24px] md:leading-[48px] lg:leading-[64px] text-xl md:text-8 lg:text-[48px]"
         >
@@ -35,10 +35,17 @@ const props = defineProps<weEmbrace>()
         </div>
       </div>
 
-      <div
-        class="w-full md:w-[400px] aspect-square bg-white/20 rounded-full flex items-center justify-center flex justify-center items-center"
-      >
-        <img :src="assets" alt="assets" />
+      <div class="text-brand-dark lg:max-w-[480px] p-5 lg:p-8 bg-white rounded-5">
+        <p class="text-[16px] lg:text-[28px] pb-12.5">{{ solution }}</p>
+        <div class="flex items-center gap-2">
+          <div class="w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+            <img :src="profile" :alt="nameUser" class="" />
+          </div>
+          <div>
+            <p class="text-[12px] md:text-5 font-500">{{ nameUser }}</p>
+            <span class="text-sm md:text-sm font-400">{{ titleUser }}</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>

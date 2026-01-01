@@ -8,7 +8,7 @@ defineProps<PricingCard>()
 <template>
   <div
     :class="[
-      'p-10 rounded-[20px] flex flex-col gap-8 transition-all duration-300 hover:scale-[1.03]',
+      'p-8 lg:p-10 rounded-[20px] flex flex-col gap-8 transition-all duration-300 hover:scale-[1.03]',
       isPopular
         ? 'bg-brand-primary text-white shadow-xl'
         : 'bg-white border border-[#F1F1F1] text-brand-dark',
@@ -21,7 +21,7 @@ defineProps<PricingCard>()
         class="bg-white text-black px-2 md:px-3 py-1 rounded-full text-lg font-400 text-center"
       >
         {{ discount }}
-      </span>gi
+      </span>
     </div>
 
     <div class="flex items-end gap-1">
