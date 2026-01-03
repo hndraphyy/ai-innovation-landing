@@ -28,5 +28,5 @@ import { BRAND_COLLABS } from '@/constants/highlight/brandCollabs'
   <WeEmbrace v-bind="WE_EMBRACE_CONTENT" />
   <PricingSection v-bind="PRICING_CONTENT" />
   <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-brand-dark" />
-  <BrandCollabs v-bind="BRAND_COLLABS" />
+  <BrandCollabs :brands="BRAND_COLLABS" />
 </template>
