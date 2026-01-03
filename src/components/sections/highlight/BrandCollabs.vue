@@ -4,8 +4,8 @@ import { BRAND_COLLABS, type BrandCollab } from '@/constants/highlight/brandColl
 
 <template>
   <div>
-    <div v-for="brand in BRAND_COLLABS" :key="">
-      <img src="" alt="" />
+    <div v-for="brand in BRAND_COLLABS" :key="brand.id">
+      <img :src="brand.image" :alt="brand.title" />
     </div>
   </div>
 </template>
