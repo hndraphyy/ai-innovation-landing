@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<ourSolutions>(), {
 </script>
 
 <template>
-  <section class="py-20 lg:py-30 !pt-20 md:!pt-60" :class="[Class]">
+  <section class="pb-20 md:pb-35 lg:pb-50 pt-pb-20 md:pt-55 lg:pt-65" :class="[Class]">
     <main class="container-center">
       <div
         class="bg-brand-primary rounded-5 p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-10 flex justify-between items-center"
