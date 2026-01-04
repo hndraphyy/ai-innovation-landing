@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-brand-dark">
+  <div class="bg-brand-dark pb-20 md:pb-50 lg:pb-60">
     <div class="container-center">
       <div class="grid grid-cols-3 lg:grid-cols-6 py-2y md:py-10 border-t border-b border-[#eeee]">
         <div v-for="brand in brands" :key="brand.id" class="w-full h-auto">
