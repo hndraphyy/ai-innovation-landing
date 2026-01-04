@@ -1,16 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { navLinks } from '@/constants/navLink'
 import logoBrand from '@/assets/icon/logo-brand.svg'
 import iconMenu from '@/assets/icon/navbar/menu-white.svg'
 import iconX from '@/assets/icon/navbar/icon-x.svg'
 import Button from '@/components/ui/Button.vue'
-
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Pricing', path: '/pricing' },
-  { name: 'Services', path: '/services' },
-]
 
 const isOpen = ref(false)
 const isScrolled = ref(false)

@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import BrandLogo from '@/assets/icon/logo-brand.svg'
-import FacebookIcon from '@/assets/icon/footer/facebook.svg'
-import InstagramIcon from '@/assets/icon/footer/instagram.svg'
-import PinterestIcon from '@/assets/icon/footer/pinterest.svg'
-import DribbbleIcon from '@/assets/icon/footer/dribbble.svg'
+
+import { navLinks } from '@/constants/navLink'
 </script>
 
 <template>
@@ -23,9 +21,11 @@ import DribbbleIcon from '@/assets/icon/footer/dribbble.svg'
             Our proven methodology ensures that we delive impactful solutions tailored to your
             unique business needs.
           </p>
-          <div class="flex flex-col justify-between">
-            <div>
-              <!-- <RouterLink to="/">Home</RouterLink> -->
+          <div class="flex flex-col justify-between items-end">
+            <div class="flex items-center gap-5">
+              <RouterLink v-for="link in navLinks" :key="link.name" :to="link.path">{{
+                link.name
+              }}</RouterLink>
             </div>
             <div class="flex gap-5">
               <div>
