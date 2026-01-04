@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BrandLogo from '@/assets/icon/logo-brand.svg'
 
-import { navLinks } from '@/constants/navLink'
+import { navLinks, sosmeds } from '@/constants/navLink'
 </script>
 
 <template>
@@ -28,18 +28,9 @@ import { navLinks } from '@/constants/navLink'
               }}</RouterLink>
             </div>
             <div class="flex gap-5">
-              <div>
-                <img :src="FacebookIcon" alt="" />
-              </div>
-              <div>
-                <img :src="InstagramIcon" alt="" />
-              </div>
-              <div>
-                <img :src="PinterestIcon" alt="" />
-              </div>
-              <div>
-                <img :src="DribbbleIcon" alt="" />
-              </div>
+              <RouterLink v-for="sosmed in sosmeds" :key="sosmed.path" :to="sosmed.path">
+                <img :src="sosmed.icon" alt="" />
+              </RouterLink>
             </div>
           </div>
         </div>

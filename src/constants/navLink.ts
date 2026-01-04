@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
   { name: 'Services', path: '/services' },
 ]
 
-export const sosmed: Sosmed[] = [
+export const sosmeds: Sosmed[] = [
   {
     icon: FacebookIcon,
     path: '/',
