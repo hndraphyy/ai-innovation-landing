@@ -7,9 +7,9 @@ import bgCorner2 from '@/assets/images/homepage/bg-corner-2.webp'
 import Button from '@/components/ui/Button.vue'
 
 const getImageSizeClass = (index: number) => {
-  if (index === 2) return 'w-16 md:w-35 lg:w-60 2xl:w-77'
-  if (index === 1 || index === 3) return 'w-12.5 md:w-25 lg:w-40 2xl:w-55'
-  return 'w-8.5 md:w-15 lg:w-28 2xl:w-35'
+  if (index === 2) return 'w-3/6 sm:w-2.5/8 md:w-35 lg:w-60 2xl:w-77'
+  if (index === 1 || index === 3) return 'w-2/6 sm:w-2/8 md:w-25 lg:w-40 2xl:w-55'
+  return 'w-1/6 sm:w-1.5/8 md:w-15 lg:w-28 2xl:w-35'
 }
 
 defineProps<HeroContent>()
@@ -17,7 +17,7 @@ defineProps<HeroContent>()
 
 <template>
   <section
-    class="bg-brand-dark relative h-vh md:h-[inherit] pt-30 pb-40 md:pt-20 md:pb-40 lg:pb-50 bg-no-repeat bg-bottom z-1 font-display"
+    class="bg-brand-dark relative pt-30 pb-40 md:pt-20 md:pb-40 lg:pb-50 bg-no-repeat bg-bottom z-1 font-display"
     :style="{
       backgroundImage: `url(${BgShadowBottom})`,
       backgroundSize: '100% auto',
@@ -56,7 +56,9 @@ defineProps<HeroContent>()
         <Button variant="outline">{{ buttons.secondary }}</Button>
       </div>
     </main>
-    <div class="relative z-2 flex justify-around items-end pt-9.5 md:pt-13 2xl:pt-15">
+    <div
+      class="relative z-2 flex justify-around items-end gap-3 md:gap-0 pt-9.5 md:pt-13 2xl:pt-15"
+    >
       <div
         v-for="(img, index) in images"
         :key="index"
