@@ -18,11 +18,30 @@ import DribbbleIcon from '@/assets/icon/footer/dribbble.svg'
             >
           </div>
         </div>
-        <div class="pt-5">
+        <div class="pt-5 flex justify-between">
           <p class="text-par max-w-[415px]">
             Our proven methodology ensures that we delive impactful solutions tailored to your
             unique business needs.
           </p>
+          <div class="flex flex-col justify-between">
+            <div>
+              <!-- <RouterLink to="/">Home</RouterLink> -->
+            </div>
+            <div class="flex gap-5">
+              <div>
+                <img :src="FacebookIcon" alt="" />
+              </div>
+              <div>
+                <img :src="InstagramIcon" alt="" />
+              </div>
+              <div>
+                <img :src="PinterestIcon" alt="" />
+              </div>
+              <div>
+                <img :src="DribbbleIcon" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <hr class="border border-[#ddd] my-12" />
