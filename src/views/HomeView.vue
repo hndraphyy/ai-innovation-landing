@@ -8,6 +8,7 @@ import WeEmbrace from '@/components/sections/highlight/WeEmbrace.vue'
 import PricingSection from '@/components/sections/highlight/PricingSection.vue'
 import OurSolutions from '@/components/sections/highlight/OurSolutions.vue'
 import BrandCollabs from '@/components/sections/highlight/BrandCollabs.vue'
+import TheFooter from '@/components/TheFooter.vue'
 
 import { HERO_CONTENT } from '@/constants/homepage/heroContent'
 import { OUR_MISSIONS_CONTENT } from '@/constants/homepage/ourServices'
@@ -29,4 +30,5 @@ import { BRAND_COLLABS } from '@/constants/highlight/brandCollabs'
   <PricingSection v-bind="PRICING_CONTENT" />
   <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-brand-dark" />
   <BrandCollabs :brands="BRAND_COLLABS" />
+  <TheFooter />
 </template>
