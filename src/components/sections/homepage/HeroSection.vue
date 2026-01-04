@@ -17,7 +17,7 @@ defineProps<HeroContent>()
 
 <template>
   <section
-    class="bg-brand-dark relative pt-30 pb-40 md:pt-20 md:pb-40 lg:pb-50 bg-no-repeat bg-bottom z-1 font-display"
+    class="bg-brand-dark relative pt-20 md:pt-20 pb-40 lg:pb-50 bg-no-repeat bg-bottom z-1 font-display"
     :style="{
       backgroundImage: `url(${BgShadowBottom})`,
       backgroundSize: '100% auto',
