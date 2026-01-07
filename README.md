@@ -25,5 +25,19 @@ A high-performance, modern, and fully responsive landing page built with the lat
 ```bash
 git clone https://github.com/hndraphyy/ai-innovation-landing.git
 cd ai-innovation-landing
+```
+
+### 2. Install dependencies
+```bash
 npm install
+```
+
+### 3. Start development server
+```bash
 npm run dev
+```
+
+### 3. Build for production
+```bash
+npm run build
+```
