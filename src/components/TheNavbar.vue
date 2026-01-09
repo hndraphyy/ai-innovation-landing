@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { navLinks } from '@/constants/navLink'
 import logoBrand from '@/assets/icon/logo-brand.svg'
 import iconMenu from '@/assets/icon/navbar/menu-white.svg'
 import iconX from '@/assets/icon/navbar/icon-x.svg'
 import Button from '@/components/ui/Button.vue'
 
+const route = useRoute()
 const isOpen = ref(false)
 const isScrolled = ref(false)
+
+const isAboutPage = computed(() => route.path === '/about')
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 8
@@ -33,7 +37,11 @@ onUnmounted(() => {
         class="flex items-center text-white decoration-none text-5 md:text-6 2xl:text-7.5 gap-2 md:gap-3"
       >
         <img :src="logoBrand" alt="Logo" class="w-10 md:w-12" />
-        <span class="font-bold tracking-tight">AI Innovation</span>
+        <span
+          class="font-bold tracking-tight"
+          :class="[isAboutPage && !isScrolled ? 'text-brand-dark' : 'text-white']"
+          >AI Innovation</span
+        >
       </RouterLink>
 
       <div class="hidden md:flex items-center gap-9">
@@ -41,7 +49,12 @@ onUnmounted(() => {
           v-for="link in navLinks"
           :key="link.name"
           :to="link.path"
-          class="text-white/80 hover:text-white decoration-none text-4 transition-colors font-medium"
+          class="decoration-none text-4 transition-colors font-medium"
+          :class="[
+            isAboutPage && !isScrolled
+              ? 'text-[#333] hover:text-brand-dark'
+              : 'text-white/80 hover:text-white',
+          ]"
         >
           {{ link.name }}
         </RouterLink>
