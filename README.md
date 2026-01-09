@@ -1,48 +1,43 @@
-# ai-innovation-landing
+# 🚀 AI Innovation Landing Page
 
-This template should help get you started developing with Vue 3 in Vite.
+A high-performance, modern, and fully responsive landing page built with the latest frontend tech stack. This project focuses on clean code, type safety, and rapid UI development.
 
-## Recommended IDE Setup
+**🌐 Live Demo:** [ai-innovation-landing.vercel.app](https://ai-innovation-landing.vercel.app)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🛠️ Tech Stack
 
-## Recommended Browser Setup
+* **Framework**: [Vue.js 3](https://vuejs.org/) (Composition API)
+* **Language**: [TypeScript](https://www.typescriptlang.org/) (Strict Type-checking)
+* **Styling**: [UnoCSS](https://unocss.dev/) (Instant on-demand Atomic CSS)
+* **Build Tool**: [Vite](https://vitejs.dev/)
+* **Deployment**: [Vercel](https://vercel.com/)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## ✨ Key Features
 
-## Type Support for `.vue` Imports in TS
+* **⚡ Lightning Fast**: Built with Vite and UnoCSS for minimal bundle size and near-instant load times.
+* **📱 Fully Responsive**: Optimized for every screen size, from mobile phones to large desktops.
+* **🛡️ Type-Safe**: Developed using TypeScript to ensure code reliability and easier maintenance.
+* **🎨 Modern UI**: Clean and professional aesthetic using atomic CSS principles.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 🚀 Getting Started
 
-## Customize configuration
+### 1. Clone the repository
+```bash
+git clone https://github.com/hndraphyy/ai-innovation-landing.git
+cd ai-innovation-landing
+```
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+### 2. Install dependencies
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+### 3. Start development server
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+### 3. Build for production
+```bash
 npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
