@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import logoBrand from '@/assets/icon/logo-brand.svg'
 import ArrowRight from '@/assets/icon/arrow-right-dark.svg'
+import Button from '@/components/ui/Button.vue'
 </script>
 
 <template>
@@ -27,6 +28,7 @@ import ArrowRight from '@/assets/icon/arrow-right-dark.svg'
             solutions that enhance productivity, optimize operations, and deliver measurable
             results.
           </p>
+          <Button variant="dark" to="/">Contact</Button>
         </div>
       </div>
     </main>
