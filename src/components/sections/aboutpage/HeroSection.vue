@@ -9,7 +9,7 @@ defineProps<HeroContent>()
 
 <template>
   <section
-    class="bg-white relative my-15 2xl:mt-20 py-10 lg:py-10 lg:py-12 xl:py-20 2xl:py-28 bg-no-repeat bg-bottom z-1 font-display"
+    class="bg-white relative my-15 2xl:mt-20 py-10 lg:py-10 lg:py-12 xl:py-20 2xl:py-28 lg:!pb-30 2xl:!pb-60 bg-no-repeat bg-bottom z-1 font-display rounded-b-[60px]"
   >
     <main class="container-center flex justify-center items-center">
       <div class="flex justify-center items-center gap-18 2xl:gap-25 flex-col lg:flex-row">
@@ -29,7 +29,7 @@ defineProps<HeroContent>()
           <div class="flex flex-wrap gap-5 justify-center">
             <div v-for="(labelName, index) in capabilities" :key="index" class="font-primary">
               <div
-                class="flex items-center gap-3 border-1.5 border-[#bbb] px-4 py-3 rounded-[60px]"
+                class="flex items-center gap-3 border-1.5 border-[#bbb] px-3 2xl:px-4 py-2 2xl:py-3 rounded-[60px]"
               >
                 <div class="bg-brand-primary rounded-[6px] w-5 h-5"></div>
                 <span class="text-[15px] lg:text-[18px]">{{ labelName.title }}</span>
