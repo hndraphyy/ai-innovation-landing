@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import type { HeroContent } from '@/constants/aboutpage/heroContent'
 import logoBrand from '@/assets/icon/logo-brand.svg'
 import ArrowRight from '@/assets/icon/arrow-right-dark.svg'
 import Button from '@/components/ui/Button.vue'
+
+defineProps<HeroContent>()
 </script>
 
 <template>
@@ -22,13 +25,9 @@ import Button from '@/components/ui/Button.vue'
           <span>OF WHAT'S POSSIBLE</span>
         </div>
         <div class="bg-brand-primary rounded-5 p-7 text-white max-w-[372px]">
-          <h2 class="text-[32px] pt-28">Balancing Innovation and Responsibility</h2>
-          <p class="text-xl pt-5 pb-12">
-            Balancing Innovation and Responsibility We are dedicated to developing tailored
-            solutions that enhance productivity, optimize operations, and deliver measurable
-            results.
-          </p>
-          <Button variant="dark" to="/">Contact</Button>
+          <h2 class="text-[32px] pt-28">{{ title }}</h2>
+          <p class="text-xl pt-5 pb-12">{{ description }}</p>
+          <Button variant="dark" :to="buttons.link">{{ buttons.label }}</Button>
         </div>
       </div>
     </main>
