@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { navLinks } from '@/constants/navLink'
 import logoBrand from '@/assets/icon/logo-brand.svg'
 import iconMenu from '@/assets/icon/navbar/menu-white.svg'
+import iconMenuDark from '@/assets/icon/navbar/manu-black.svg'
 import iconX from '@/assets/icon/navbar/icon-x.svg'
 import Button from '@/components/ui/Button.vue'
 
@@ -12,6 +13,12 @@ const isOpen = ref(false)
 const isScrolled = ref(false)
 
 const isAboutPage = computed(() => route.path === '/about')
+
+const menuIcon = computed(() => {
+  if (isOpen.value) return iconX
+  if (isAboutPage.value && !isScrolled.value) return iconMenuDark
+  return iconMenu
+})
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 8
@@ -28,20 +35,21 @@ onUnmounted(() => {
 
 <template>
   <nav
-    class="fixed top-0 left-0 right-0 h-20 2xl:h-25 flex items-center font-display z-100 transition-all duration-100"
+    class="fixed top-0 left-0 right-0 h-20 2xl:h-25 flex items-center font-display z-100 transition-all duration-300"
     :class="[isScrolled || isOpen ? 'bg-brand-dark' : 'bg-transparent']"
   >
     <div class="container-center flex justify-between items-center w-full">
       <RouterLink
         to="/"
-        class="flex items-center text-white decoration-none text-5 md:text-6 2xl:text-7.5 gap-2 md:gap-3"
+        class="flex items-center decoration-none text-5 md:text-6 2xl:text-7.5 gap-2 md:gap-3"
       >
         <img :src="logoBrand" alt="Logo" class="w-10 md:w-12" />
         <span
-          class="font-bold tracking-tight"
-          :class="[isAboutPage && !isScrolled ? 'text-brand-dark' : 'text-white']"
-          >AI Innovation</span
+          class="font-bold tracking-tight transition-colors duration-300"
+          :class="[isAboutPage && !isScrolled && !isOpen ? 'text-brand-dark' : 'text-white']"
         >
+          AI Innovation
+        </span>
       </RouterLink>
 
       <div class="hidden md:flex items-center gap-9">
@@ -67,7 +75,7 @@ onUnmounted(() => {
           @click="isOpen = !isOpen"
           class="md:hidden cursor-pointer bg-transparent border-none flex items-center p-2"
         >
-          <img :src="isOpen ? iconX : iconMenu" alt="Menu" class="w-6 h-6" />
+          <img :src="menuIcon" alt="Menu" class="w-6 h-6 transition-all" />
         </button>
       </div>
     </div>
@@ -86,7 +94,9 @@ onUnmounted(() => {
         >
           {{ link.name }}
         </RouterLink>
-        <Button to="/contact" @click="isOpen = false"> Contact Us </Button>
+        <div class="pt-4">
+          <Button to="/contact" @click="isOpen = false" class="w-full"> Contact Us </Button>
+        </div>
       </div>
     </Transition>
   </nav>
@@ -102,6 +112,5 @@ onUnmounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(-20px);
 }
 </style>
