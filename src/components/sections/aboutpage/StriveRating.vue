@@ -1,7 +1,22 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import gsap from 'gsap'
 import type { StriveContent } from '@/constants/aboutpage/striveContent'
 
-defineProps<StriveContent>()
+const props = defineProps<StriveContent>()
+
+const displayPoints = ref(props.strivePoint.map(() => 0))
+
+onMounted(() => {
+  props.strivePoint.forEach((item, index) => {
+    gsap.to(displayPoints.value, {
+      [index]: item.point,
+      duration: 3,
+      ease: 'power3.out',
+      snap: { [index]: 1 },
+    })
+  })
+})
 </script>
 
 <template>
@@ -9,11 +24,12 @@ defineProps<StriveContent>()
     <main class="container-center text-center">
       <h1 class="text-heading !text-white font-primary max-w-[767px] m-auto">{{ title }}</h1>
       <p class="text-par !text-white pt-4 pb-15">{{ description }}</p>
-      <div class="flex justify-center items-center gap-15">
+      <div class="flex flex-wrap justify-center items-center gap-15">
         <div v-for="(rate, index) in strivePoint" :key="index">
           <div class="!text-white">
             <h1 class="text-22 flex items-start gap-2">
-              {{ rate.point }}<span class="text-10 text-brand-primary pt-3 font-bold">+</span>
+              {{ displayPoints[index] }}
+              <span class="text-10 text-brand-primary pt-3 font-bold">+</span>
             </h1>
             <span class="text-4">{{ rate.label }}</span>
           </div>
