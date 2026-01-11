@@ -26,7 +26,7 @@ import { BRAND_COLLABS } from '@/constants/highlight/brandCollabs'
   <TextRunning />
   <AiRevolutionSection v-bind="AI_REVOLUTION_CONTENT" />
   <ServicesSection :services="SERVICES_CONENT" />
-  <WeEmbrace v-bind="WE_EMBRACE_CONTENT" />
+  <WeEmbrace v-bind="WE_EMBRACE_CONTENT" Class="bg-white" />
   <PricingSection v-bind="PRICING_CONTENT" />
   <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-brand-dark" />
   <BrandCollabs :brands="BRAND_COLLABS" />

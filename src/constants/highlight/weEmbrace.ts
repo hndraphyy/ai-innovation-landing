@@ -10,6 +10,7 @@ export interface weEmbrace {
   description: string
   buttons: buttonType[]
   assets: string
+  Class?: string
 }
 
 export const WE_EMBRACE_CONTENT = {

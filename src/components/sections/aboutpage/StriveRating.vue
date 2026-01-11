@@ -23,7 +23,7 @@ onMounted(() => {
   <section class="bg-brand-dark pt-15 md:pt-30 lg:pt-45 xl:pt-60 md:-mt-30 lg:py-27 xl:py-40">
     <main class="container-center text-center">
       <h1 class="text-heading !text-white font-primary max-w-[767px] m-auto">{{ title }}</h1>
-      <p class="text-par !text-white pt-4 pb-15">{{ description }}</p>
+      <p class="text-par !text-white pt-4 pb-15 max-w-[971px] m-auto">{{ description }}</p>
       <div class="flex flex-wrap justify-center items-center gap-15">
         <div v-for="(rate, index) in strivePoint" :key="index">
           <div class="!text-white">

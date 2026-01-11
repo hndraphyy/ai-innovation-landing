@@ -2,11 +2,13 @@
 import type { weEmbrace } from '@/constants/highlight/weEmbrace'
 import Button from '@/components/ui/Button.vue'
 
-const props = defineProps<weEmbrace>()
+const props = withDefaults(defineProps<weEmbrace>(), {
+  Class: 'bg-white',
+})
 </script>
 
 <template>
-  <section class="py-20 lg:py-30">
+  <section class="py-20 lg:py-30" :class="[Class]">
     <main class="container-center">
       <div
         class="bg-brand-primary rounded-5 p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-10"

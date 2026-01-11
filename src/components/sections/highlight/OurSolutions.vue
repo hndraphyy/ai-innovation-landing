@@ -3,7 +3,7 @@ import type { ourSolutions } from '@/constants/highlight/ourSolutions'
 import Button from '@/components/ui/Button.vue'
 
 const props = withDefaults(defineProps<ourSolutions>(), {
-  Class: 'bg-brand-primary',
+  Class: 'bg-white',
 })
 </script>
 
