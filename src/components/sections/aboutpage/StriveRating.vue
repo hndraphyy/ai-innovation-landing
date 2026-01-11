@@ -45,9 +45,11 @@ onUnmounted(() => {
       <div class="flex flex-wrap justify-center items-center gap-15">
         <div v-for="(rate, index) in strivePoint" :key="index">
           <div class="!text-white">
-            <h1 class="text-22 flex items-start gap-2">
+            <h1 class="text-22 flex justify-center items-start gap-2">
               {{ displayPoints[index] }}
-              <span class="text-10 text-brand-primary pt-3 font-bold">+</span>
+              <div class="relative">
+                <span class="text-10 text-brand-primary pt-3 font-bold absolute -right-0">+</span>
+              </div>
             </h1>
             <span class="text-4">{{ rate.label }}</span>
           </div>
