@@ -1,3 +1,7 @@
+export interface labelName {
+  title: string
+}
+
 export interface HeroContent {
   title: string
   description: string
@@ -5,6 +9,7 @@ export interface HeroContent {
     label: string
     link: string
   }
+  capabilities: labelName[]
 }
 
 export const HERO_CONTENT: HeroContent = {
@@ -15,4 +20,11 @@ export const HERO_CONTENT: HeroContent = {
     label: 'Contact Us',
     link: '/',
   },
+  capabilities: [
+    { title: 'Discovery' },
+    { title: 'Strategy' },
+    { title: 'Support' },
+    { title: 'Implementation' },
+    { title: 'Colloboration' },
+  ],
 }
