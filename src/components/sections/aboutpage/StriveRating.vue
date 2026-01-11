@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { StriveContent } from '@/constants/aboutpage/striveContent'
@@ -9,19 +9,31 @@ const props = defineProps<StriveContent>()
 const displayPoints = ref(props.strivePoint.map(() => 0))
 
 onMounted(() => {
-  props.strivePoint.forEach((item, index) => {
-    gsap.to(displayPoints.value, {
-      [index]: item.point,
-      duration: 3,
-      ease: 'power3.out',
-      snap: { [index]: 1 },
-      scrollTrigger: {
-        trigger: '.text-22',
-        start: 'top 100%',
-        toggleActions: 'play none none none',
-      },
+  displayPoints.value = props.strivePoint.map(() => 0)
+
+  setTimeout(() => {
+    ScrollTrigger.refresh()
+
+    props.strivePoint.forEach((item, index) => {
+      gsap.to(displayPoints.value, {
+        [index]: item.point,
+        duration: 3,
+        ease: 'power3.out',
+        snap: { [index]: 1 },
+        scrollTrigger: {
+          trigger: '.text-22',
+          start: 'top 95%',
+          toggleActions: 'play none none none',
+          id: `counter-${index}`,
+        },
+      })
     })
-  })
+  }, 100)
+})
+
+onUnmounted(() => {
+  const allTriggers = ScrollTrigger.getAll()
+  allTriggers.forEach((trigger) => trigger.kill())
 })
 </script>
 
