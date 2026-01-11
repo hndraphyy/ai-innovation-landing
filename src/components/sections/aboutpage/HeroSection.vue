@@ -9,7 +9,7 @@ defineProps<HeroContent>()
 
 <template>
   <section
-    class="bg-white relative my-15 2xl:mt-20 py-10 lg:py-10 lg:py-12 xl:py-20 2xl:py-28 lg:!pb-30 2xl:!pb-60 bg-no-repeat bg-bottom z-1 font-display rounded-b-[60px]"
+    class="bg-white relative my-15 2xl:mt-20 lg:py-10 lg:py-12 xl:py-20 2xl:py-28 pt-10 md:!pb-20 lg:!pb-30 2xl:!pb-60 bg-no-repeat bg-bottom z-1 font-display md:rounded-b-[60px]"
   >
     <main class="container-center flex justify-center items-center">
       <div class="flex justify-center items-center gap-18 2xl:gap-25 flex-col lg:flex-row">
