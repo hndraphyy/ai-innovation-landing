@@ -8,14 +8,14 @@ interface btnContent {
   link: string
 }
 
-export interface ServiceContent {
+export interface TeamContent {
   title: string
   description: string
-  team: TeamList[]
+  teams: TeamList[]
   btn: btnContent
 }
 
-export const SERVICES_CONTENT: ServiceContent = {
+export const OUR_TEAM_CONTENT: TeamContent = {
   title: 'Our Team',
   description:
     'Our mission is to empower businesses with cutting-edge Al technologies that enhance performance, streamline operations, and drive growth.',
@@ -23,7 +23,7 @@ export const SERVICES_CONTENT: ServiceContent = {
     label: 'Show More',
     link: '/',
   },
-  team: [
+  teams: [
     {
       nameTeam: 'Guy Hawkins',
       job: 'Designer',
