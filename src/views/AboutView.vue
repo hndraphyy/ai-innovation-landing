@@ -7,6 +7,7 @@ import ServiceSection from '@/components/sections/aboutpage/ServiceSection.vue'
 import TextRunning from '@/components/sections/highlight/TextRunning.vue'
 import OurTeamSection from '@/components/sections/aboutpage/OurTeamSection.vue'
 import OurSolutions from '@/components/sections/highlight/OurSolutions.vue'
+import PricingSection from '@/components/sections/highlight/PricingSection.vue'
 
 import { HERO_CONTENT } from '@/constants/aboutpage/heroContent'
 import { STRIVE_CONTENT } from '@/constants/aboutpage/striveContent'
@@ -15,6 +16,7 @@ import { BRAND_COLLABS } from '@/constants/highlight/brandCollabs'
 import { SERVICES_CONTENT } from '@/constants/aboutpage/serviceContent'
 import { OUR_TEAM_CONTENT } from '@/constants/aboutpage/ourTeamContent'
 import { OUR_SOLUTIONS_CONTENT } from '@/constants/highlight/ourSolutions'
+import { PRICING_CONTENT } from '@/constants/highlight/pricing'
 </script>
 
 <template>
@@ -25,5 +27,6 @@ import { OUR_SOLUTIONS_CONTENT } from '@/constants/highlight/ourSolutions'
   <ServiceSection v-bind="SERVICES_CONTENT" />
   <TextRunning />
   <OurTeamSection v-bind="OUR_TEAM_CONTENT" />
-  <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-white md:-mt-40" />
+  <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-white" />
+  <PricingSection v-bind="PRICING_CONTENT" />
 </template>
