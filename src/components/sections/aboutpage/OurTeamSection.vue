@@ -17,12 +17,14 @@ defineProps<TeamContent>()
           <Button :to="btn.link" variant="dark">{{ btn.label }}</Button>
         </div>
       </div>
-      <div class="flex flex-wrap justify-between items-center gap-5 pt-10 lg:pt-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 pt-10 lg:pt-15">
         <div v-for="(team, index) in teams" :key="index">
           <div>
-            <div class="p-5 lg:p-8 rounded-5 border border-[#DDD] h-full">
-              <div class="w-8 h-8 rounded-[12px] bg-[#ddd]"></div>
-              <h1 class="text-4 lg:text-6 2xl:text-9 font-primary py-2 md:py-4">
+            <div class="h-full text-center">
+              <div class="w-full h-full">
+                <img :src="team.profile" :alt="team.nameTeam" class="object-contain" />
+              </div>
+              <h1 class="text-4 lg:text-6 2xl:text-9 font-primary pt-2 md:pt-4">
                 {{ team.nameTeam }}
               </h1>
               <p class="text-par">{{ team.job }}</p>
