@@ -12,7 +12,7 @@ import BrandCollabs from '@/components/sections/highlight/BrandCollabs.vue'
 import { HERO_CONTENT } from '@/constants/homepage/heroContent'
 import { OUR_MISSIONS_CONTENT } from '@/constants/homepage/ourServices'
 import { AI_REVOLUTION_CONTENT } from '@/constants/homepage/aiRevolutionContent'
-import { SERVICES_CONENT } from '@/constants/homepage/servicesContent'
+import { SERVICES_CONTENT } from '@/constants/homepage/servicesContent'
 import { WE_EMBRACE_CONTENT } from '@/constants/highlight/weEmbrace'
 import { PRICING_CONTENT } from '@/constants/highlight/pricing'
 import { OUR_SOLUTIONS_CONTENT } from '@/constants/highlight/ourSolutions'
@@ -24,7 +24,7 @@ import { BRAND_COLLABS } from '@/constants/highlight/brandCollabs'
   <OurMissionSection v-bind="OUR_MISSIONS_CONTENT" />
   <TextRunning />
   <AiRevolutionSection v-bind="AI_REVOLUTION_CONTENT" />
-  <ServicesSection :services="SERVICES_CONENT" />
+  <ServicesSection :services="SERVICES_CONTENT" />
   <WeEmbrace v-bind="WE_EMBRACE_CONTENT" Class="bg-white" />
   <PricingSection v-bind="PRICING_CONTENT" />
   <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-brand-dark" />

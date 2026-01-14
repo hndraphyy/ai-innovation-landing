@@ -3,7 +3,7 @@ export interface servicesContent {
   description: string
 }
 
-export const SERVICES_CONENT: servicesContent[] = [
+export const SERVICES_CONTENT: servicesContent[] = [
   {
     title: 'Al Consulting',
     description:

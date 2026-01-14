@@ -3,16 +3,26 @@ interface ServiceList {
   desc: string
 }
 
+interface btnContent {
+  label: string
+  link: string
+}
+
 export interface ServiceContent {
   title: string
   description: string
   services: ServiceList[]
+  btn: btnContent
 }
 
 export const SERVICES_CONTENT: ServiceContent = {
   title: 'Services',
   description:
     'Our mission is to empower businesses with cutting-edge Al technologies that enhance performance, streamline operations, and drive growth.',
+  btn: {
+    label: 'Lern More',
+    link: '/',
+  },
   services: [
     {
       title: 'Al Consulting',
