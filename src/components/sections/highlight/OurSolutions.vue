@@ -8,10 +8,10 @@ const props = withDefaults(defineProps<ourSolutions>(), {
 </script>
 
 <template>
-  <section class="pb-20 md:pb-35 lg:pb-50 pt-20 md:pt-55 lg:pt-65" :class="[Class]">
+  <section class="pb-10 md:pb-35 lg:pb-40 pt-10 md:pt-55 2xl:pt-65" :class="[Class]">
     <main class="container-center">
       <div
-        class="bg-brand-primary rounded-5 p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-10 flex justify-between items-center"
+        class="bg-brand-primary rounded-5 p-4 sm:p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-10 flex justify-between items-center"
       >
         <div class="text-white lg:max-w-[458px] 2xl:max-w-full">
           <h1

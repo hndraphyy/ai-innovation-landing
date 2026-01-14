@@ -6,7 +6,7 @@ defineProps<TeamContent>()
 </script>
 
 <template>
-  <section class="relative py-20 lg:py-30">
+  <section class="relative pt-20 lg:pt-30">
     <main class="container-center">
       <div class="flex justify-between items-center flex-col md:flex-row">
         <div class="text-center md:text-start">

@@ -7,7 +7,7 @@ defineProps<PricingType>()
 
 <template>
   <section
-    class="relative pb-20 md:pb-0 md:py-20 lg:py-30 md:!pb-42 md:rounded-b-[60px] md:-mb-15 bg-white"
+    class="relative pb-10 md:pb-0 md:py-20 lg:py-30 md:!pb-42 md:rounded-b-[60px] md:-mb-15 bg-white"
   >
     <main class="container-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-0 lg:gap-10 mb-20 items-center">
