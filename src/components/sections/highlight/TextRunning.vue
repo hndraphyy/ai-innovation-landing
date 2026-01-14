@@ -3,7 +3,7 @@ import LogoBrand from '@/assets/icon/logo-brand.svg'
 </script>
 
 <template>
-  <div class="py-20 2xl:py-30">
+  <div class="md:py-10">
     <div
       class="bg-brand-dark py-3 lg:py-5 2xl:py-8 overflow-hidden whitespace-nowrap border-y border-white/10"
     >
