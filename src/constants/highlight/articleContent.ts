@@ -1,10 +1,14 @@
+interface btn {
+  link: string
+  label: string
+}
+
 export interface ArticleCard {
-  membershipName: string
-  price: number
-  benefitTitle: string
-  features: string[]
-  isPopular?: boolean
-  discount?: string
+  thumbnail: string
+  date: string
+  title: string
+  desc: string
+  button: btn[]
 }
 
 export interface ArticleType {
@@ -14,46 +18,44 @@ export interface ArticleType {
 }
 
 export const ARTICLE_CONTENT: ArticleType = {
-  title: 'AI Solutions That Drive Success & Create Value',
+  title: 'Article',
   description:
-    'Our mission is to empower businesses with cutting-edge Al technologies that enhance performance, streamline operations, and drive growth. We believe in the transformative potential of Al and are dedicated to moking it accessible to businesses ofall sizos, across all industrios.',
+    'Our mission is to empower businesses with cutting-edge AI technologies that enhance performance, streamline operations, and drive growth.',
   cards: [
     {
-      membershipName: 'Silver Membership',
-      price: 19,
-      benefitTitle:
-        'Benefit from fundamental AI capabilities, reliable support, and a cost-effective entry point.',
-      features: [
-        'Time Efficiency',
-        'Versatility and Adaptability',
-        'Consistent Quality',
-        'Cost-Efficiency',
+      thumbnail: 'url_gambar_1.jpg',
+      date: 'AUGUST 22, 2024',
+      title: 'What You Need to Know About Machine Learning',
+      desc: 'Explore the impact of AI, highlighting specific examples of how businesses are leveraging AI to streamline operations.',
+      button: [
+        {
+          link: '/learn-more-1',
+          label: 'Learn More',
+        },
       ],
     },
     {
-      membershipName: 'Silver Membership',
-      price: 19,
-      discount: '-30%',
-      isPopular: true,
-      benefitTitle:
-        'Benefit from fundamental AI capabilities, reliable support, and a cost-effective entry point.',
-      features: [
-        'Time Efficiency',
-        'Versatility and Adaptability',
-        'Consistent Quality',
-        'Cost-Efficiency',
+      thumbnail: 'url_gambar_2.jpg',
+      date: 'AUGUST 22, 2024',
+      title: 'What You Need to Know About Machine Learning',
+      desc: 'Explore the impact of AI, highlighting specific examples of how businesses are leveraging AI to streamline operations.',
+      button: [
+        {
+          link: '/learn-more-2',
+          label: 'Learn More',
+        },
       ],
     },
     {
-      membershipName: 'Silver Membership',
-      price: 19,
-      benefitTitle:
-        'Benefit from fundamental AI capabilities, reliable support, and a cost-effective entry point.',
-      features: [
-        'Time Efficiency',
-        'Versatility and Adaptability',
-        'Consistent Quality',
-        'Cost-Efficiency',
+      thumbnail: 'url_gambar_3.jpg',
+      date: 'AUGUST 22, 2024',
+      title: 'What You Need to Know About Machine Learning',
+      desc: 'Explore the impact of AI, highlighting specific examples of how businesses are leveraging AI to streamline operations.',
+      button: [
+        {
+          link: '/learn-more-3',
+          label: 'Learn More',
+        },
       ],
     },
   ],
