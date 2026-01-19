@@ -1,3 +1,5 @@
+import articleImg from '@/assets/images/highlight/article.webp'
+
 interface btnType {
   link: string
   label: string
@@ -28,8 +30,8 @@ export const ARTICLE_CONTENT: ArticleType = {
   },
   cards: [
     {
-      thumbnail: 'url_gambar_1.jpg',
-      date: 'AUGUST 22, 2024',
+      thumbnail: articleImg,
+      date: 'AUGUST 22, 2026',
       title: 'What You Need to Know About Machine Learning',
       desc: 'Explore the impact of AI, highlighting specific examples of how businesses are leveraging AI to streamline operations.',
       btn: {
@@ -38,8 +40,8 @@ export const ARTICLE_CONTENT: ArticleType = {
       },
     },
     {
-      thumbnail: 'url_gambar_2.jpg',
-      date: 'AUGUST 22, 2024',
+      thumbnail: articleImg,
+      date: 'AUGUST 22, 2026',
       title: 'What You Need to Know About Machine Learning',
       desc: 'Explore the impact of AI, highlighting specific examples of how businesses are leveraging AI to streamline operations.',
       btn: {
@@ -48,8 +50,8 @@ export const ARTICLE_CONTENT: ArticleType = {
       },
     },
     {
-      thumbnail: 'url_gambar_3.jpg',
-      date: 'AUGUST 22, 2024',
+      thumbnail: articleImg,
+      date: 'AUGUST 22, 2026',
       title: 'What You Need to Know About Machine Learning',
       desc: 'Explore the impact of AI, highlighting specific examples of how businesses are leveraging AI to streamline operations.',
       btn: {
