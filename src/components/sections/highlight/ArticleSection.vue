@@ -20,7 +20,7 @@ defineProps<ArticleType>()
           <Button :to="btn.link" variant="primary">{{ btn.label }}</Button>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-5 pt-20">
+      <div class="grid grid md:grid-cols-2 lg:grid-cols-3 gap-5 pt-20">
         <CardArticleCard v-for="(card, index) in cards" :key="index" v-bind="card" />
       </div>
     </main>

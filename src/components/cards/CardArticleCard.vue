@@ -10,9 +10,13 @@ defineProps<ArticleCard>()
     <div class="w-full h-full">
       <img :src="thumbnail" :alt="title" class="w-full rounded-t-7" />
     </div>
-    <div class="p-8 lg:p-10">
+    <div class="p-5 lg:p-7">
       <span>{{ date }}</span>
-      <h1 class="font-primary pt-7 pb-5 text-7">{{ title }}</h1>
+      <h1
+        class="font-primary md:text-4 lg:text-6 font-semibold mb-2 py-3 md:py-5 font-primary transition-colors group-hover:text-white"
+      >
+        {{ title }}
+      </h1>
       <p class="text-par">{{ desc }}</p>
       <div class="pt-8">
         <Button
