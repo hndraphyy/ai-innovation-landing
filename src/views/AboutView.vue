@@ -8,6 +8,7 @@ import TextRunning from '@/components/sections/highlight/TextRunning.vue'
 import OurTeamSection from '@/components/sections/aboutpage/OurTeamSection.vue'
 import OurSolutions from '@/components/sections/highlight/OurSolutions.vue'
 import PricingSection from '@/components/sections/highlight/PricingSection.vue'
+import ArticleSection from '@/components/sections/highlight/ArticleSection.vue'
 
 import { HERO_CONTENT } from '@/constants/aboutpage/heroContent'
 import { STRIVE_CONTENT } from '@/constants/aboutpage/striveContent'
@@ -17,6 +18,7 @@ import { SERVICES_CONTENT } from '@/constants/aboutpage/serviceContent'
 import { OUR_TEAM_CONTENT } from '@/constants/aboutpage/ourTeamContent'
 import { OUR_SOLUTIONS_CONTENT } from '@/constants/highlight/ourSolutions'
 import { PRICING_CONTENT } from '@/constants/highlight/pricing'
+import { ARTICLE_CONTENT } from '@/constants/highlight/articleContent'
 </script>
 
 <template>
@@ -29,4 +31,5 @@ import { PRICING_CONTENT } from '@/constants/highlight/pricing'
   <OurTeamSection v-bind="OUR_TEAM_CONTENT" />
   <OurSolutions v-bind="OUR_SOLUTIONS_CONTENT" Class="bg-white" />
   <PricingSection v-bind="PRICING_CONTENT" />
+  <ArticleSection v-bind="ARTICLE_CONTENT" />
 </template>

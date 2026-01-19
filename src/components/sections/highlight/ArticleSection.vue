@@ -1,22 +1,21 @@
 <script setup lang="ts">
-import type { PricingType } from '@/constants/highlight/pricing'
-import PricingCardComponent from '@/components/cards/PricingCard.vue'
+import type { ArticleType } from '@/constants/highlight/articleContent'
+import Button from '@/components/ui/Button.vue'
 
-defineProps<PricingType>()
+defineProps<ArticleType>()
 </script>
 
 <template>
-  <section
-    class="relative pb-10 md:pb-35 lg:pb-30 2xl:pb-40 pt-10 lg:pt-25 md:rounded-b-[60px] md:-mb-15 bg-white"
-  >
+  <section class="relative pb-10 md:pb-35 lg:pb-30 2xl:pb-40 pt-10 lg:pt-25 bg-white">
     <main class="container-center">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-0 lg:gap-10 mb-20 items-center">
-        <h2 class="text-heading max-w-lg text-center md:text-start pb-4 md:pb-0">{{ title }}</h2>
-        <p class="text-par text-center md:text-start">{{ description }}</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <PricingCardComponent v-for="(card, index) in cards" :key="index" v-bind="card" />
+      <div class="flex justify-between items-center flex-col md:flex-row">
+        <div class="text-center md:text-start">
+          <h1 class="text-heading font-primary">{{ title }}</h1>
+          <p class="text-par md:max-w-[507px] lg:max-w-[667px] pt-6">{{ description }}</p>
+        </div>
+        <div class="pt-10 lg:pt-0">
+          <Button :to="btn.link" variant="dark">{{ btn.label }}</Button>
+        </div>
       </div>
     </main>
   </section>
