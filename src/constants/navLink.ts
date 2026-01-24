@@ -8,8 +8,8 @@ import DribbbleIcon from '@/assets/icon/footer/dribbble.svg'
 export const navLinks: NavLink[] = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
-  { name: 'Pricing', path: '/pricing' },
-  { name: 'Services', path: '/services' },
+  { name: 'Pricing', path: '/#pricing' },
+  { name: 'Services', path: '/#services' },
 ]
 
 export const sosmeds: Sosmed[] = [

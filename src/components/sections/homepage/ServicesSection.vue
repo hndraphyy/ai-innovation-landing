@@ -30,7 +30,7 @@ const prev = () => {
 </script>
 
 <template>
-  <section id="servicesSection" class="md:py-20 lg:py-30">
+  <section id="services" class="md:py-20 lg:py-30">
     <main class="container-center">
       <div class="flex justify-between items-center pb-5 md:pb-8 border-b border-[#DDDDDD]">
         <span class="text-brand-gray text-5 font-primary">Service</span>

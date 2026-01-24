@@ -7,7 +7,7 @@ defineProps<PricingType>()
 
 <template>
   <section
-    id="pricingSection"
+    id="pricing"
     class="relative pb-10 md:pb-35 lg:pb-30 2xl:pb-40 pt-10 lg:pt-25 md:rounded-b-[60px] md:-mb-15 bg-white"
   >
     <main class="container-center">
