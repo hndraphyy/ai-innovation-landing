@@ -26,17 +26,27 @@ defineProps<HeroContent>()
   >
     <div class="relative">
       <div class="flex justify-center items-center">
-        <img :src="BgShadowTop" alt="bg-shadow-top" class="absolute -top-30 z-0 animate-glow" />
+        <img
+          :src="BgShadowTop"
+          alt="bg-shadow-top"
+          class="absolute -top-30 z-0 animate-glow"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <img
         :src="bgCorner1"
         alt="bg-corner-1"
         class="absolute -top-10 w-40 md:w-90 2xl:w-125 z-0 left-0"
+        loading="lazy"
+        decoding="async"
       />
       <img
         :src="bgCorner2"
         alt="bg-corner-2"
         class="absolute -top-10 w-40 md:w-90 2xl:w-125 z-0 right-0"
+        loading="lazy"
+        decoding="async"
       />
     </div>
     <main class="container-center pt-14 2xl:pt-20 text-center relative z-1">
@@ -68,7 +78,13 @@ defineProps<HeroContent>()
         <div
           class="rounded-full overflow-hidden aspect-square border-2 border-white/10 shadow-2xl hover:scale-[1.1] transition-500"
         >
-          <img :src="img" :alt="`hero-img-${index}`" class="w-full h-full object-cover" />
+          <img
+            :src="img"
+            :alt="`hero-img-${index}`"
+            :fetchpriority="index === 2 ? 'high' : 'auto'"
+            :loading="index === 2 ? 'eager' : 'lazy'"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
