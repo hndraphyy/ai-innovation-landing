@@ -23,6 +23,7 @@ const baseClass =
     :is="to ? 'RouterLink' : 'button'"
     :to="to"
     :class="[baseClass, variantClasses[variant]]"
+    aria-label="Close Menu"
   >
     <slot>{{ label }}</slot>
   </component>
