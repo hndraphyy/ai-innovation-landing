@@ -16,17 +16,21 @@ export const sosmeds: Sosmed[] = [
   {
     icon: FacebookIcon,
     path: '/',
+    name: 'Facebook',
   },
   {
     icon: InstagramIcon,
     path: '/',
+    name: 'Instagram',
   },
   {
     icon: PinterestIcon,
     path: '/',
+    name: 'Pinteres',
   },
   {
     icon: DribbbleIcon,
     path: '/',
+    name: 'Dribbble',
   },
 ]

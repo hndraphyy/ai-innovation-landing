@@ -28,8 +28,13 @@ import { navLinks, sosmeds } from '@/constants/navLink'
               </RouterLink>
             </div>
             <div class="flex gap-5">
-              <RouterLink v-for="sosmed in sosmeds" :key="sosmed.path" :to="sosmed.path">
-                <img :src="sosmed.icon" alt="" />
+              <RouterLink
+                v-for="sosmed in sosmeds"
+                :key="sosmed.icon"
+                :to="sosmed.path"
+                :aria-label="sosmed.name || 'Social Media'"
+              >
+                <img :src="sosmed.icon" :alt="sosmed.name || 'icon'" />
               </RouterLink>
             </div>
           </div>
@@ -39,7 +44,7 @@ import { navLinks, sosmeds } from '@/constants/navLink'
       <div class="md:flex justify-between text-par">
         <p class="pb-2 md:pb-0">
           nbase, All Rights Reserved,
-          <RouterLink class="text-brand-primary" to="/">Licensing</RouterLink>
+          <RouterLink class="text-brand-primary underline" to="/">Licensing</RouterLink>
         </p>
         <span class="text-brand-primary!">Webflow Templates by 128.digitol Powered by Wenflow</span>
       </div>

@@ -49,8 +49,8 @@ export default defineConfig({
   theme: {
     colors: {
       brand: {
-        primary: '#9588E8',
-        primaryHover: '#6e63b5ff',
+        primary: '#6d5ecfff',
+        primaryHover: '#6055aeff',
         dark: '#111111',
         gray: '#767676',
       },
